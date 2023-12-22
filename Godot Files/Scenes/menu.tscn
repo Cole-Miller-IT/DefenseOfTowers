@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr0idesa52x2j"]
+
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_jj0iw"]
+[ext_resource type="AudioStream" uid="uid://bvkv4jlq3n4uh" path="res://Assets/Sound/buttonClickMenu.mp3" id="2_cqpwo"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jj0iw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 544.0
+offset_right = 138.0
+offset_bottom = 647.0
+
+[node name="ButtonStart" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="ButtonOptions" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="ButtonQuit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cqpwo")
+volume_db = -13.187
+
+[connection signal="pressed" from="VBoxContainer/ButtonStart" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonOptions" to="." method="_on_button_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonQuit" to="." method="_on_button_quit_pressed"]
