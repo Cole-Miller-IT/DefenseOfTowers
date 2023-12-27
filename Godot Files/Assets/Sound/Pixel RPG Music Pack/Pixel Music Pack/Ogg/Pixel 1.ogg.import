@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cpwniho5ln7wj"
+path="res://.godot/imported/Pixel 1.ogg-7a60aa3cb677644e7812f6727a2cd35d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Pixel RPG Music Pack/Pixel Music Pack/Ogg/Pixel 1.ogg"
+dest_files=["res://.godot/imported/Pixel 1.ogg-7a60aa3cb677644e7812f6727a2cd35d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

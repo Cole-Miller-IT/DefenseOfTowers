@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7eh8dxv2xio5"
+path="res://.godot/imported/Pixel 6.mp3-d27dc2f56c8411b8e548f2c8b7761d36.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Pixel RPG Music Pack/Pixel Music Pack/mp3/Pixel 6.mp3"
+dest_files=["res://.godot/imported/Pixel 6.mp3-d27dc2f56c8411b8e548f2c8b7761d36.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
