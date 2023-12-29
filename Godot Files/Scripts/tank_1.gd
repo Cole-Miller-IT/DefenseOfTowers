@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Tank1
+
 const SPEED = 300.0
 
 func _process(delta):

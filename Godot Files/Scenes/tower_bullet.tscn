@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bu5pirbgg7jgu"]
+
+[ext_resource type="Script" path="res://Scripts/tower_bullet.gd" id="1_8dj3q"]
+[ext_resource type="Texture2D" uid="uid://bib87x6x8n82r" path="res://Assets/Images/towerDefense_tile249.png" id="1_mwtc3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbvea"]
+size = Vector2(64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qmpxt"]
+radius = 224.009
+
+[node name="TowerBullet" type="StaticBody2D"]
+script = ExtResource("1_8dj3q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_gbvea")
+
+[node name="BulletFirePosition" type="Marker2D" parent="."]
+
+[node name="DetectionRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRadius"]
+shape = SubResource("CircleShape2D_qmpxt")
+
+[node name="TowerDefenseTile249" type="Sprite2D" parent="."]
+texture = ExtResource("1_mwtc3")
+
+[node name="TimerFireRate" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="body_entered" from="DetectionRadius" to="." method="_on_detection_radius_body_entered"]
+[connection signal="body_exited" from="DetectionRadius" to="." method="_on_detection_radius_body_exited"]
+[connection signal="timeout" from="TimerFireRate" to="." method="_on_timer_fire_rate_timeout"]

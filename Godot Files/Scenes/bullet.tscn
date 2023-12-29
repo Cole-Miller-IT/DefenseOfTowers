@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bepe22n28vnaf"]
+
+[ext_resource type="Texture2D" uid="uid://d1verxhf8e24c" path="res://Assets/Images/kenney_tower-defense-top-down/PNG/Default size/towerDefense_tile272.png" id="1_rxemq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4creb"]
+radius = 11.0
+
+[node name="Bullet" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4creb")
+
+[node name="TowerDefenseTile272" type="Sprite2D" parent="."]
+texture = ExtResource("1_rxemq")
