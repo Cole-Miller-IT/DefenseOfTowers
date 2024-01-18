@@ -24,11 +24,14 @@ shape = SubResource("RectangleShape2D_gbvea")
 shape = SubResource("CircleShape2D_qmpxt")
 
 [node name="TowerDefenseTile249" type="Sprite2D" parent="."]
+rotation = 1.5708
 texture = ExtResource("1_mwtc3")
 
 [node name="TimerFireRate" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="BulletContainer" type="Node" parent="."]
 
 [connection signal="body_entered" from="DetectionRadius" to="." method="_on_detection_radius_body_entered"]
 [connection signal="body_exited" from="DetectionRadius" to="." method="_on_detection_radius_body_exited"]

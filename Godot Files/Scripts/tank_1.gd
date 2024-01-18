@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name Tank1
 
-const SPEED = 300.0
+const SPEED = 100.0
 
 func _process(delta):
 	#Gets the current progress from the path2DFollows node that is specific for this instance
