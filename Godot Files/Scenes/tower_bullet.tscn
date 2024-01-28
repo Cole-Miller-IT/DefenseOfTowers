@@ -17,6 +17,7 @@ position = Vector2(0.5, -1)
 shape = SubResource("RectangleShape2D_gbvea")
 
 [node name="BulletFirePosition" type="Marker2D" parent="."]
+position = Vector2(33, 0)
 
 [node name="DetectionRadius" type="Area2D" parent="."]
 

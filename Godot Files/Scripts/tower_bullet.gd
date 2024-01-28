@@ -3,7 +3,7 @@ extends StaticBody2D
 var bullet = preload("res://Scenes/bullet.tscn")
 var currentTarget = null
 var availableTargets = []
-var damage = 10
+var damage = 50
 #var fireRate = 2.0 	#How long until the turret shoots again, in seconds
 
 
@@ -26,12 +26,13 @@ func _process(delta):
 func _on_timer_fire_rate_timeout():
 	#Check if the tower can shoot any units
 	if (currentTarget != null):
-		print("shooting at target")
-		print(currentTarget)
+		#print("shooting at target")
+		#print(currentTarget)
 		
 		#Create a bullet and fire it at the targeted enemy
 		var tempBullet = bullet.instantiate()
 		tempBullet.damage = damage
+		tempBullet.target = currentTarget
 		tempBullet.global_position = $BulletFirePosition.global_position
 
 		get_node("BulletContainer").add_child(tempBullet)
@@ -39,24 +40,25 @@ func _on_timer_fire_rate_timeout():
 func _on_detection_radius_body_entered(body):
 	#Detect if the body is a targetable enemy
 	if body is Tank1:
-		print("detected" + body.name)
+		#print("detected" + body.name)
 		
 		if currentTarget == null:
 			currentTarget = body
-			print("Current target is now: " + str(currentTarget))
+			#print("Current target is now: " + str(currentTarget))
 			
 		availableTargets.append(body)
-		print("Available targets are: " + str(availableTargets))
+		#print("Available targets are: " + str(availableTargets))
 	
 
 func _on_detection_radius_body_exited(body):
 	if body is Tank1:
 		#If the currently targeted enemy left the radius, choose a new target if there is an available target
 		if (body == currentTarget):
-			print("The current target has left the area")
+			#print("The current target has left the area")
 			
 			if (!availableTargets):
-				print("switching to new target")
+				pass
+				#print("switching to new target")
 			else:
-				print("no targets in range to switch to")
+				#print("no targets in range to switch to")
 				currentTarget = null
