@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxcs4bcmhvvbq"]
+[gd_scene load_steps=6 format=3 uid="uid://dxcs4bcmhvvbq"]
 
 [ext_resource type="PackedScene" uid="uid://bt7qi81p7hren" path="res://Scenes/tile_map.tscn" id="1_kvi5x"]
 [ext_resource type="Script" path="res://Scripts/Path2D_Level_1.gd" id="2_b4soo"]
 [ext_resource type="PackedScene" uid="uid://dg1fw7is7vt36" path="res://Scenes/tank_1.tscn" id="2_qh2bs"]
-[ext_resource type="PackedScene" uid="uid://bu5pirbgg7jgu" path="res://Scenes/tower_bullet.tscn" id="4_pov52"]
 [ext_resource type="PackedScene" uid="uid://jutvao4o135e" path="res://Scenes/ui.tscn" id="5_x8pf8"]
 
 [sub_resource type="Curve2D" id="Curve2D_wg5eg"]
@@ -35,9 +34,8 @@ loop = false
 
 [node name="Tank 1" parent="Path/PathSpawner/Path2D/PathFollow2D" instance=ExtResource("2_qh2bs")]
 
-[node name="TowerBullet" parent="." instance=ExtResource("4_pov52")]
-position = Vector2(502, 412)
-
 [node name="UI" parent="." instance=ExtResource("5_x8pf8")]
+
+[node name="Towers" type="Node" parent="."]
 
 [connection signal="timeout" from="Path/PathSpawner" to="Path" method="_on_path_spawner_timeout"]

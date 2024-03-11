@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bu5pirbgg7jgu"]
+[gd_scene load_steps=6 format=3 uid="uid://bu5pirbgg7jgu"]
 
 [ext_resource type="Script" path="res://Scripts/tower_bullet.gd" id="1_8dj3q"]
 [ext_resource type="Texture2D" uid="uid://bib87x6x8n82r" path="res://Assets/Images/towerDefense_tile249.png" id="1_mwtc3"]
@@ -8,6 +8,13 @@ size = Vector2(64, 64)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qmpxt"]
 radius = 224.009
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mt3a8"]
+bg_color = Color(0.207843, 0.6, 0.6, 1)
+corner_radius_top_left = 200
+corner_radius_top_right = 200
+corner_radius_bottom_right = 200
+corner_radius_bottom_left = 200
 
 [node name="TowerBullet" type="StaticBody2D"]
 script = ExtResource("1_8dj3q")
@@ -33,6 +40,14 @@ wait_time = 2.0
 autostart = true
 
 [node name="BulletContainer" type="Node" parent="."]
+
+[node name="GUIArea" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.396078)
+offset_left = -224.0
+offset_top = -222.0
+offset_right = 224.0
+offset_bottom = 225.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt3a8")
 
 [connection signal="body_entered" from="DetectionRadius" to="." method="_on_detection_radius_body_entered"]
 [connection signal="body_exited" from="DetectionRadius" to="." method="_on_detection_radius_body_exited"]
