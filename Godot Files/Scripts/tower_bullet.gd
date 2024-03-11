@@ -55,10 +55,12 @@ func _on_detection_radius_body_exited(body):
 		#If the currently targeted enemy left the radius, choose a new target if there is an available target
 		if (body == currentTarget):
 			#print("The current target has left the area")
+			availableTargets.remove_at(0)
 			
-			if (!availableTargets):
-				pass
-				#print("switching to new target")
-			else:
+			if (availableTargets.is_empty()):
 				#print("no targets in range to switch to")
 				currentTarget = null
+			else:
+				#print("switching to new target")
+				#print(availableTargets)
+				currentTarget = availableTargets[0] #change to the target that entered after the target that was destroyed
