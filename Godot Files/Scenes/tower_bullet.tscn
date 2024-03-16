@@ -43,6 +43,7 @@ autostart = true
 
 [node name="GUIArea" type="Panel" parent="."]
 modulate = Color(1, 1, 1, 0.396078)
+z_index = -1
 offset_left = -224.0
 offset_top = -222.0
 offset_right = 224.0
