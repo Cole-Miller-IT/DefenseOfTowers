@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxcs4bcmhvvbq"]
+[gd_scene load_steps=7 format=3 uid="uid://dxcs4bcmhvvbq"]
 
+[ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_elxj8"]
 [ext_resource type="PackedScene" uid="uid://bt7qi81p7hren" path="res://Scenes/tile_map.tscn" id="1_kvi5x"]
 [ext_resource type="Script" path="res://Scripts/Path2D_Level_1.gd" id="2_b4soo"]
 [ext_resource type="PackedScene" uid="uid://dg1fw7is7vt36" path="res://Scenes/tank_1.tscn" id="2_qh2bs"]
@@ -12,6 +13,7 @@ _data = {
 point_count = 2
 
 [node name="Level 1" type="Node2D"]
+script = ExtResource("1_elxj8")
 
 [node name="TileMap" parent="." instance=ExtResource("1_kvi5x")]
 position = Vector2(0, 0)
@@ -34,8 +36,11 @@ loop = false
 
 [node name="Tank 1" parent="Path/PathSpawner/Path2D/PathFollow2D" instance=ExtResource("2_qh2bs")]
 
-[node name="UI" parent="." instance=ExtResource("5_x8pf8")]
-
 [node name="Towers" type="Node" parent="."]
 
+[node name="UI" parent="." instance=ExtResource("5_x8pf8")]
+
+[connection signal="connectEnemy" from="Path" to="." method="_on_path_connect_enemy"]
 [connection signal="timeout" from="Path/PathSpawner" to="Path" method="_on_path_spawner_timeout"]
+[connection signal="dealtPlayerDamage" from="Path/PathSpawner/Path2D/PathFollow2D/Tank 1" to="UI" method="_on_tank_1_dealt_player_damage"]
+[connection signal="died" from="Path/PathSpawner/Path2D/PathFollow2D/Tank 1" to="UI" method="_on_tank_1_died"]

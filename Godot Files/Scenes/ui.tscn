@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://jutvao4o135e"]
+[gd_scene load_steps=7 format=3 uid="uid://jutvao4o135e"]
 
 [ext_resource type="PackedScene" uid="uid://bh6ocvuwmblu8" path="res://Scenes/tower_bullet_panel.tscn" id="1_gbtgs"]
+[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_nd6nn"]
 [ext_resource type="Script" path="res://Scripts/Score.gd" id="2_wouie"]
+[ext_resource type="Script" path="res://Scripts/Health.gd" id="4_sj2hp"]
+[ext_resource type="Script" path="res://Scripts/Gold.gd" id="5_7byjx"]
 
 [sub_resource type="Theme" id="Theme_n1m1t"]
 default_font_size = 30
 
 [node name="UI" type="CanvasLayer"]
+script = ExtResource("1_nd6nn")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 976.0
@@ -34,7 +38,9 @@ script = ExtResource("2_wouie")
 layout_mode = 2
 text = "Health:
 "
+script = ExtResource("4_sj2hp")
 
 [node name="Gold" type="Label" parent="BoxContainer"]
 layout_mode = 2
 text = "Gold: "
+script = ExtResource("5_7byjx")

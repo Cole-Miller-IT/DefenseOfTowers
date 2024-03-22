@@ -6,5 +6,8 @@ var score = 0
 func _ready():
 	text = "Score: %s" % score
 	
-func updateScore():
-	#tank_1..connect($UserInterface/ScoreLabel._on_mob_squashed.bind())
+func update(value):
+	score += value
+	print(score)
+	text = "Score: %s" % score
+

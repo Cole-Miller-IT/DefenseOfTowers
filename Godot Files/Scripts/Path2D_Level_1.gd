@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var pathRoute = preload("res://Scenes/level_1_path.tscn")
 @onready var enemy = preload("res://Scenes/tank_1.tscn")
+signal connectEnemy(enemy)
 
 
 func _on_path_spawner_timeout():
@@ -16,3 +17,6 @@ func _on_path_spawner_timeout():
 	
 	#Add the path to the level scene under the "Path" node
 	add_child(newRoute)
+	
+	#Connect signals to UI
+	connectEnemy.emit(newEnemy)
