@@ -6,7 +6,7 @@ signal connectEnemy(enemy)
 
 
 func _on_path_spawner_timeout():
-	print("Spawn a new tank with a path")
+	#print("Spawn a new tank with a path")
 	
 	#Create a path for the enemy to follow
 	var newRoute = pathRoute.instantiate()
@@ -18,5 +18,6 @@ func _on_path_spawner_timeout():
 	#Add the path to the level scene under the "Path" node
 	add_child(newRoute)
 	
-	#Connect signals to UI
+	#Connect signals to UI (Signals are not copied when you instantiate an new object)
 	connectEnemy.emit(newEnemy)
+	
