@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd75yek746wnh"]
+
+[ext_resource type="PackedScene" uid="uid://bu5pirbgg7jgu" path="res://Scenes/tower_bullet.tscn" id="1_34c8v"]
+[ext_resource type="Script" path="res://Scripts/tower_bullet_freeze.gd" id="2_8jetv"]
+
+[node name="TowerBullet" instance=ExtResource("1_34c8v")]
+script = ExtResource("2_8jetv")
+
+[node name="TowerDefenseTile249" parent="." index="3"]
+modulate = Color(0, 0.333333, 1, 1)
+
+[node name="GUIArea" parent="." index="6"]
+offset_left = -116.0
+offset_top = -110.0
+offset_right = 114.0
+offset_bottom = 108.0

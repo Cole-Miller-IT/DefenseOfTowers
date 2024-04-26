@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://hccae5iu0w2g"]
+
+[ext_resource type="Script" path="res://Scripts/BulletFreeze.gd" id="1_nkwqs"]
+[ext_resource type="PackedScene" uid="uid://bepe22n28vnaf" path="res://Scenes/bullet.tscn" id="1_to172"]
+
+[node name="Bullet" instance=ExtResource("1_to172")]
+script = ExtResource("1_nkwqs")
+
+[node name="TowerDefenseTile272" parent="." index="1"]
+modulate = Color(0, 0, 1, 1)

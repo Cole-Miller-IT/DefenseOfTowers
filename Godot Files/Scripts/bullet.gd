@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Bullet
+
 #Assigned by the turret
 var damage
 var target

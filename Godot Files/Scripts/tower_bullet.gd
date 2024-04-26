@@ -1,9 +1,12 @@
 extends StaticBody2D
 
+class_name BulletTower
+
 var bullet = preload("res://Scenes/bullet.tscn")
 var currentTarget = null
 var availableTargets = []
 var damage = 50
+var cost = 100
 #var fireRate = 2.0 	#How long until the turret shoots again, in seconds
 
 
