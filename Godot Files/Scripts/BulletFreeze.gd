@@ -12,7 +12,7 @@ func _on_area_2d_body_entered(body):
 		#Deal damage
 		body.health -= damage
 		
-		body.speed = 50
+		body.speed = 30
 		
 		#Destroy the bullet
 		queue_free()
