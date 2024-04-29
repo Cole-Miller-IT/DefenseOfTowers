@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh2gd0cerd5ua"]
+
+[ext_resource type="PackedScene" uid="uid://bu5pirbgg7jgu" path="res://Scenes/tower_bullet.tscn" id="1_rhbq5"]
+[ext_resource type="Script" path="res://Scripts/tower_bullet_bomb.gd" id="2_l5hcc"]
+[ext_resource type="Texture2D" uid="uid://kmtw8wkey0y2" path="res://Assets/Images/towerDefense_tile206.png" id="3_fret0"]
+
+[node name="TowerBullet" instance=ExtResource("1_rhbq5")]
+script = ExtResource("2_l5hcc")
+
+[node name="TowerDefenseTile249" parent="." index="3"]
+texture = ExtResource("3_fret0")

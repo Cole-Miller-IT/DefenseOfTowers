@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://c70g0iecvyq70"]
+
+[ext_resource type="PackedScene" uid="uid://bepe22n28vnaf" path="res://Scenes/bullet.tscn" id="1_4shfk"]
+[ext_resource type="Script" path="res://Scenes/bullet_bomb.gd" id="2_1yt7s"]
+[ext_resource type="Texture2D" uid="uid://d4b86mmhb6600" path="res://Assets/Images/towerDefense_tile251.png" id="2_finbe"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5t1i7"]
+radius = 9.0
+height = 40.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lpi5i"]
+height = 45.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o3j5h"]
+radius = 219.057
+
+[node name="Bullet" instance=ExtResource("1_4shfk")]
+script = ExtResource("2_1yt7s")
+
+[node name="CollisionShape2D" parent="." index="0"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_5t1i7")
+
+[node name="TowerDefenseTile272" parent="." index="1"]
+rotation = 1.5708
+texture = ExtResource("2_finbe")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_lpi5i")
+
+[node name="ExplosionRadius" type="Area2D" parent="." index="3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionRadius" index="0"]
+shape = SubResource("CircleShape2D_o3j5h")
+disabled = true
+
+[connection signal="body_entered" from="ExplosionRadius" to="." method="_on_explosion_radius_body_entered"]
