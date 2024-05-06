@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://crm5syo40av3o"]
+
+[ext_resource type="PackedScene" uid="uid://bh6ocvuwmblu8" path="res://Scenes/tower_bullet_panel.tscn" id="1_2vq3k"]
+[ext_resource type="Texture2D" uid="uid://c5axm8tv7w2hv" path="res://Assets/Images/towerDefense_tile181.png" id="2_7duv4"]
+[ext_resource type="Script" path="res://Scripts/tower_bullet_income_panel.gd" id="2_shgip"]
+[ext_resource type="Texture2D" uid="uid://o042ul8jus1a" path="res://Assets/Images/towerDefense_tile287.png" id="3_jnhxs"]
+
+[node name="tower_bullet_Panel" instance=ExtResource("1_2vq3k")]
+script = ExtResource("2_shgip")
+
+[node name="TowerDefenseTile249" parent="." index="0"]
+texture = ExtResource("2_7duv4")
+
+[node name="TowerDefenseTile250" type="Sprite2D" parent="." index="1"]
+position = Vector2(32, 32)
+texture = ExtResource("3_jnhxs")
