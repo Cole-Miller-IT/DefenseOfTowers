@@ -5,5 +5,5 @@ extends BulletTower
 func _ready():
 	bullet = preload("res://Scenes/bullet_freeze.tscn")
 	damage = 10
-	cost = 100
+	cost = 75
 

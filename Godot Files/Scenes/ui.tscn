@@ -34,15 +34,15 @@ offset_bottom = 106.0
 
 [node name="tower_bullet_Panel3" parent="." instance=ExtResource("4_ihaef")]
 offset_left = 992.0
-offset_top = 128.0
+offset_top = 192.0
 offset_right = 1056.0
-offset_bottom = 192.0
+offset_bottom = 256.0
 
 [node name="tower_bullet_Panel4" parent="." instance=ExtResource("5_8ctsf")]
 offset_left = 1066.0
-offset_top = 128.0
+offset_top = 192.0
 offset_right = 1130.0
-offset_bottom = 192.0
+offset_bottom = 256.0
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 offset_right = 768.0

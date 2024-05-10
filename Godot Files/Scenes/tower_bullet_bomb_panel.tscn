@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://bh6ocvuwmblu8" path="res://Scenes/tower_bullet_panel.tscn" id="1_ba5h0"]
 [ext_resource type="Texture2D" uid="uid://kmtw8wkey0y2" path="res://Assets/Images/towerDefense_tile206.png" id="2_alcup"]
-[ext_resource type="Script" path="res://Scenes/tower_bullet_bomb_panel.gd" id="2_l5vd8"]
+[ext_resource type="Script" path="res://Scripts/tower_bullet_bomb_panel.gd" id="2_ovd7o"]
 
 [node name="tower_bullet_Panel" instance=ExtResource("1_ba5h0")]
-script = ExtResource("2_l5vd8")
+script = ExtResource("2_ovd7o")
 
 [node name="TowerDefenseTile249" parent="." index="0"]
 texture = ExtResource("2_alcup")

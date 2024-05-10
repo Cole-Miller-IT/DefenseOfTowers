@@ -12,5 +12,6 @@ script = ExtResource("2_shgip")
 texture = ExtResource("2_7duv4")
 
 [node name="TowerDefenseTile250" type="Sprite2D" parent="." index="1"]
+z_index = 1
 position = Vector2(32, 32)
 texture = ExtResource("3_jnhxs")

@@ -7,6 +7,8 @@ var tempTower
 
 func _on_gui_input(event):
 	var tempTower = tower.instantiate()
+	print(tempTower.cost)
+	print(tempTower.name)
 	
 	if get_parent().get_node("BoxContainer/Gold").gold >= tempTower.cost:
 		#print("Has enough gold")

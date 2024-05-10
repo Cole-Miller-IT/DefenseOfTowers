@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bu5pirbgg7jgu" path="res://Scenes/tower_bullet.tscn" id="1_34c8v"]
 [ext_resource type="Script" path="res://Scripts/tower_bullet_freeze.gd" id="2_8jetv"]
 
-[node name="TowerBullet" instance=ExtResource("1_34c8v")]
+[node name="TowerFreeze" instance=ExtResource("1_34c8v")]
 script = ExtResource("2_8jetv")
 
 [node name="TowerDefenseTile249" parent="." index="3"]
