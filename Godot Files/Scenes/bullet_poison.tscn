@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://drkf4pmtv4pgs"]
+
+[ext_resource type="PackedScene" uid="uid://bepe22n28vnaf" path="res://Scenes/bullet.tscn" id="1_wusan"]
+[ext_resource type="Script" path="res://Scenes/bullet_poison.gd" id="2_yyfuf"]
+[ext_resource type="Texture2D" uid="uid://c7o41iu2ktiq1" path="res://Scenes/towerDefense_tile130.png" id="3_odg48"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_awvrk"]
+radius = 197.091
+
+[node name="BulletPoison" instance=ExtResource("1_wusan")]
+script = ExtResource("2_yyfuf")
+
+[node name="TowerDefenseTile272" parent="." index="1"]
+modulate = Color(0, 0.776471, 0, 1)
+
+[node name="timerDespawn" type="Timer" parent="." index="3"]
+wait_time = 4.0
+one_shot = true
+
+[node name="TimerDamage" type="Timer" parent="." index="4"]
+
+[node name="Poison" type="Area2D" parent="." index="5"]
+
+[node name="PoisonRadius" type="CollisionShape2D" parent="Poison" index="0"]
+modulate = Color(0, 0.882353, 0, 0.52549)
+shape = SubResource("CircleShape2D_awvrk")
+disabled = true
+
+[node name="TowerDefenseTile130" type="Sprite2D" parent="." index="6"]
+visible = false
+modulate = Color(0.521569, 1, 0.529412, 0.298039)
+position = Vector2(0.500013, -0.500013)
+scale = Vector2(6.17188, 6.14063)
+texture = ExtResource("3_odg48")
+
+[connection signal="timeout" from="timerDespawn" to="." method="_on_timer_despawn_timeout"]
+[connection signal="timeout" from="TimerDamage" to="." method="_on_timer_damage_timeout"]
+[connection signal="body_entered" from="Poison" to="." method="_on_poison_body_entered"]

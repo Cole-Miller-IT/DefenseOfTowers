@@ -14,7 +14,7 @@ func _ready():
 func _physics_process(delta):
 	#remove bullets that now no longer have a target b/c a previous bullet killed the target
 	if (target == null):
-		print("target destroyed")
+		#print("target destroyed")
 		queue_free()
 		
 	else:

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c70g0iecvyq70"]
 
 [ext_resource type="PackedScene" uid="uid://bepe22n28vnaf" path="res://Scenes/bullet.tscn" id="1_4shfk"]
-[ext_resource type="Script" path="res://Scenes/bullet_bomb.gd" id="2_1yt7s"]
+[ext_resource type="Script" path="res://Scripts/bullet_bomb.gd" id="2_0io0r"]
 [ext_resource type="Texture2D" uid="uid://d4b86mmhb6600" path="res://Assets/Images/towerDefense_tile251.png" id="2_finbe"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5t1i7"]
@@ -15,7 +15,7 @@ height = 45.0
 radius = 219.057
 
 [node name="Bullet" instance=ExtResource("1_4shfk")]
-script = ExtResource("2_1yt7s")
+script = ExtResource("2_0io0r")
 
 [node name="CollisionShape2D" parent="." index="0"]
 rotation = 1.5708

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://jutvao4o135e"]
+[gd_scene load_steps=11 format=3 uid="uid://jutvao4o135e"]
 
 [ext_resource type="PackedScene" uid="uid://bh6ocvuwmblu8" path="res://Scenes/tower_bullet_panel.tscn" id="1_gbtgs"]
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_nd6nn"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Scripts/Health.gd" id="4_sj2hp"]
 [ext_resource type="Script" path="res://Scripts/Gold.gd" id="5_7byjx"]
 [ext_resource type="PackedScene" uid="uid://crm5syo40av3o" path="res://Scenes/tower_bullet_income_panel.tscn" id="5_8ctsf"]
+[ext_resource type="PackedScene" uid="uid://cjrfxht4j0eg5" path="res://Scenes/tower_bullet_poison_panel.tscn" id="6_1ukie"]
 
 [sub_resource type="Theme" id="Theme_n1m1t"]
 default_font_size = 30
@@ -43,6 +44,12 @@ offset_left = 1066.0
 offset_top = 192.0
 offset_right = 1130.0
 offset_bottom = 256.0
+
+[node name="tower_bullet_Panel5" parent="." instance=ExtResource("6_1ukie")]
+offset_left = 992.0
+offset_top = 330.553
+offset_right = 1056.0
+offset_bottom = 394.553
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 offset_right = 768.0

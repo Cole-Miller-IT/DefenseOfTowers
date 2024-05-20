@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://j764hlqtuo0v"]
+
+[ext_resource type="PackedScene" uid="uid://bu5pirbgg7jgu" path="res://Scenes/tower_bullet.tscn" id="1_54eol"]
+[ext_resource type="Script" path="res://Scenes/tower_bullet_poison.gd" id="2_7a2g5"]
+
+[node name="TowerPoison" instance=ExtResource("1_54eol")]
+modulate = Color(0.392157, 0.921569, 0.403922, 1)
+script = ExtResource("2_7a2g5")

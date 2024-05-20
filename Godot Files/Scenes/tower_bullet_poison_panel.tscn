@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjrfxht4j0eg5"]
+
+[ext_resource type="PackedScene" uid="uid://bh6ocvuwmblu8" path="res://Scenes/tower_bullet_panel.tscn" id="1_1gn7o"]
+[ext_resource type="Script" path="res://Scripts/tower_bullet_poison_panel.gd" id="2_c8hhl"]
+
+[node name="tower_bullet_Panel" instance=ExtResource("1_1gn7o")]
+script = ExtResource("2_c8hhl")
+
+[node name="TowerDefenseTile249" parent="." index="0"]
+modulate = Color(0.192157, 1, 0.247059, 1)
