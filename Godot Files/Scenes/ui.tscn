@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://jutvao4o135e"]
+[gd_scene load_steps=13 format=3 uid="uid://jutvao4o135e"]
 
 [ext_resource type="PackedScene" uid="uid://bh6ocvuwmblu8" path="res://Scenes/tower_bullet_panel.tscn" id="1_gbtgs"]
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_nd6nn"]
@@ -17,6 +17,9 @@ default_font_size = 30
 font_size = 51
 outline_size = 1
 outline_color = Color(0, 0, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k2s6m"]
+font_size = 25
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_nd6nn")
@@ -94,10 +97,10 @@ text = "Pause"
 
 [node name="PauseLabel" type="Label" parent="."]
 visible = false
-offset_left = 483.0
+offset_left = 400.0
 offset_top = 256.0
-offset_right = 540.0
-offset_bottom = 279.0
+offset_right = 579.0
+offset_bottom = 326.0
 size_flags_horizontal = 4
 text = "Paused
 "
@@ -105,5 +108,32 @@ label_settings = SubResource("LabelSettings_4vi8b")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Tutorial" type="VBoxContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -176.0
+offset_right = -176.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 2
+
+[node name="TutorialMsg" type="Label" parent="Tutorial"]
+custom_minimum_size = Vector2(976, 0)
+layout_mode = 2
+text = "Hello and welcome to Defence of Towers. Your goal is to get through all of the available levels."
+label_settings = SubResource("LabelSettings_k2s6m")
+autowrap_mode = 2
+
+[node name="ButtonTutorial" type="Button" parent="Tutorial"]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "next"
+
 [connection signal="pressed" from="ButtonResume" to="." method="_on_button_resume_pressed"]
 [connection signal="pressed" from="ButtonPause" to="." method="_on_button_pause_pressed"]
+[connection signal="pressed" from="Tutorial/ButtonTutorial" to="." method="_on_button_tutorial_pressed"]
