@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://jutvao4o135e"]
+[gd_scene load_steps=12 format=3 uid="uid://jutvao4o135e"]
 
 [ext_resource type="PackedScene" uid="uid://bh6ocvuwmblu8" path="res://Scenes/tower_bullet_panel.tscn" id="1_gbtgs"]
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_nd6nn"]
@@ -12,6 +12,11 @@
 
 [sub_resource type="Theme" id="Theme_n1m1t"]
 default_font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_4vi8b"]
+font_size = 51
+outline_size = 1
+outline_color = Color(0, 0, 1, 1)
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_nd6nn")
@@ -72,3 +77,33 @@ script = ExtResource("4_sj2hp")
 layout_mode = 2
 text = "Gold: "
 script = ExtResource("5_7byjx")
+
+[node name="ButtonResume" type="Button" parent="."]
+process_mode = 2
+offset_left = 768.0
+offset_right = 847.0
+offset_bottom = 72.0
+text = "Resume
+"
+
+[node name="ButtonPause" type="Button" parent="."]
+offset_left = 847.0
+offset_right = 926.0
+offset_bottom = 72.0
+text = "Pause"
+
+[node name="PauseLabel" type="Label" parent="."]
+visible = false
+offset_left = 483.0
+offset_top = 256.0
+offset_right = 540.0
+offset_bottom = 279.0
+size_flags_horizontal = 4
+text = "Paused
+"
+label_settings = SubResource("LabelSettings_4vi8b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ButtonResume" to="." method="_on_button_resume_pressed"]
+[connection signal="pressed" from="ButtonPause" to="." method="_on_button_pause_pressed"]
