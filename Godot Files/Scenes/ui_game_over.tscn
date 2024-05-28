@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbba8b2608xr0"]
+
+[ext_resource type="Script" path="res://Scripts/UIGameOver.gd" id="1_kwfrs"]
+[ext_resource type="AudioStream" uid="uid://bvkv4jlq3n4uh" path="res://Assets/Sound/buttonClickMenu.mp3" id="2_iga0f"]
+
+[node name="UIGameOver" type="CanvasLayer"]
+process_mode = 2
+layer = 11
+script = ExtResource("1_kwfrs")
+
+[node name="OverlayColor" type="ColorRect" parent="."]
+modulate = Color(0.541176, 0.396078, 0.572549, 0.572549)
+show_behind_parent = true
+z_index = -1
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_iga0f")
+volume_db = -13.187
+
+[node name="ButtonRestart" type="Button" parent="."]
+offset_left = 511.0
+offset_top = 226.0
+offset_right = 641.0
+offset_bottom = 257.0
+text = "Restart
+"
+
+[node name="ButtonQuit" type="Button" parent="."]
+offset_left = 511.0
+offset_top = 317.0
+offset_right = 641.0
+offset_bottom = 348.0
+text = "Quit"
+
+[node name="ButtonMenu" type="Button" parent="."]
+offset_left = 511.0
+offset_top = 271.0
+offset_right = 641.0
+offset_bottom = 302.0
+text = "Return to Menu"
+
+[connection signal="pressed" from="ButtonRestart" to="." method="_on_button_restart_pressed"]
+[connection signal="pressed" from="ButtonQuit" to="." method="_on_button_quit_pressed"]
+[connection signal="pressed" from="ButtonMenu" to="." method="_on_button_menu_pressed"]

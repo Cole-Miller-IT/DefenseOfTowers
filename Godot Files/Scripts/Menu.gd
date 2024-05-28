@@ -6,14 +6,7 @@ func _ready():
 	$VBoxContainer/ButtonStart.grab_focus()
 	$MusicMenu.play()
 	#Preload the game scene here on start up
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-
+	
 
 func _on_button_start_pressed():
 	$MusicMenu.stop()
