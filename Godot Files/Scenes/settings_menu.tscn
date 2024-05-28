@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn6ueip6lwwov"]
+
+[ext_resource type="Script" path="res://Scripts/SettingsMenu.gd" id="1_ik1oc"]
+[ext_resource type="AudioStream" uid="uid://j1t8g6tx86t4" path="res://Assets/Sound/settingsMenuTestSound.mp3" id="2_s6rul"]
+
+[node name="SettingsMenu" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_ik1oc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 0.513726)
+offset_right = 1150.0
+offset_bottom = 645.0
+
+[node name="MasterAudioSlider" type="HSlider" parent="."]
+offset_left = 413.0
+offset_top = 404.0
+offset_right = 725.0
+offset_bottom = 520.0
+min_value = -80.0
+max_value = 0.0
+
+[node name="ButtonExit" type="Button" parent="."]
+offset_left = 1094.0
+offset_top = -1.0
+offset_right = 1149.0
+offset_bottom = 36.0
+text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_s6rul")
+
+[node name="ButtonTestSound" type="Button" parent="."]
+offset_left = 508.0
+offset_top = 410.0
+offset_right = 635.0
+offset_bottom = 441.0
+text = "play test sound
+"
+
+[connection signal="value_changed" from="MasterAudioSlider" to="." method="_on_master_audio_slider_value_changed"]
+[connection signal="pressed" from="ButtonExit" to="." method="_on_button_exit_pressed"]
+[connection signal="pressed" from="ButtonTestSound" to="." method="_on_button_test_sound_pressed"]

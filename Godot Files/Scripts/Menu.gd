@@ -5,6 +5,7 @@ extends Control
 func _ready():
 	$VBoxContainer/ButtonStart.grab_focus()
 	$MusicMenu.play()
+	
 	#Preload the game scene here on start up
 	
 
@@ -16,8 +17,10 @@ func _on_button_start_pressed():
 
 
 func _on_button_options_pressed():
+	$MusicMenu.stop()
 	$ButtonSound.play()
-
+	$SettingsMenu.visible = true
+	
 
 func _on_button_quit_pressed():
 	get_tree().quit()

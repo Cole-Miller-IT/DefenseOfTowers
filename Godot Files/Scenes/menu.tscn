@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cr0idesa52x2j"]
+[gd_scene load_steps=6 format=3 uid="uid://cr0idesa52x2j"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_jj0iw"]
 [ext_resource type="AudioStream" uid="uid://bvkv4jlq3n4uh" path="res://Assets/Sound/buttonClickMenu.mp3" id="2_cqpwo"]
 [ext_resource type="AudioStream" uid="uid://bmycf5chu8wwe" path="res://Assets/Sound/MenuMusic.mp3" id="3_xdsrt"]
 [ext_resource type="Texture2D" uid="uid://bn11mtcictbpb" path="res://Assets/Images/placeholder main menu Image.jpg" id="4_calid"]
+[ext_resource type="PackedScene" uid="uid://dn6ueip6lwwov" path="res://Scenes/settings_menu.tscn" id="5_1k1p8"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -51,6 +52,8 @@ volume_db = -20.613
 position = Vector2(576, 322.75)
 scale = Vector2(0.450781, 0.446181)
 texture = ExtResource("4_calid")
+
+[node name="SettingsMenu" parent="." instance=ExtResource("5_1k1p8")]
 
 [connection signal="pressed" from="VBoxContainer/ButtonStart" to="." method="_on_button_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonOptions" to="." method="_on_button_options_pressed"]
