@@ -13,7 +13,7 @@ func _on_button_start_pressed():
 	$MusicMenu.stop()
 	$ButtonSound.play()
 	
-	get_tree().change_scene_to_file("res://Scenes/level_1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/level_menu.tscn")
 
 
 func _on_button_options_pressed():

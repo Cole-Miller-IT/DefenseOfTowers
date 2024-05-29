@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpd08fqguqyy0"]
+
+[ext_resource type="Script" path="res://Scripts/LevelMenu.gd" id="1_gps3p"]
+[ext_resource type="Texture2D" uid="uid://dcm4egdofwjde" path="res://Assets/Images/levelSelectBackground.jpg" id="2_xgxix"]
+[ext_resource type="AudioStream" uid="uid://bvkv4jlq3n4uh" path="res://Assets/Sound/buttonClickMenu.mp3" id="3_rg0bg"]
+
+[node name="LevelMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gps3p")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_xgxix")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+modulate = Color(0.419608, 1, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.0
+offset_top = -85.5
+offset_right = 185.0
+offset_bottom = 85.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button1" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Level 1"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Level 2"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Level 3"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Level 4"
+
+[node name="Button5" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Level 5"
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rg0bg")
+volume_db = -13.187
+
+[connection signal="gui_input" from="VBoxContainer" to="." method="_on_v_box_container_gui_input"]
+[connection signal="pressed" from="VBoxContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button5" to="." method="_on_button_5_pressed"]
