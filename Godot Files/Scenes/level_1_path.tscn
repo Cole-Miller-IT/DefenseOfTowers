@@ -2,7 +2,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_eg5jw"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 863, 653, 0, 0, 0, 0, 865, 1)
+"points": PackedVector2Array(0, 0, 0, 0, 1, 294, 0, 0, 0, 0, 1156, 293)
 }
 point_count = 2
 
@@ -10,6 +10,6 @@ point_count = 2
 curve = SubResource("Curve2D_eg5jw")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
-position = Vector2(863, 653)
-rotation = -1.56773
+position = Vector2(1, 294)
+rotation = -0.000865801
 loop = false

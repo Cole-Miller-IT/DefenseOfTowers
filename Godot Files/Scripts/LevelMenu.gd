@@ -22,8 +22,4 @@ func _on_button_3_pressed():
 func _on_button_4_pressed():
 	print("go to level 4")
 	$ButtonSound.play()
-
-
-func _on_button_5_pressed():
-	print("go to level 5")
-	$ButtonSound.play()
+	get_tree().change_scene_to_file("res://Scenes/level_4.tscn")
