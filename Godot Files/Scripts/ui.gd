@@ -2,6 +2,11 @@ extends CanvasLayer
 
 var tutorialMsg = 1  #1 represents the first msg, 2 the second, etc..
 	
+func _ready():
+	pass
+	#$Tutorial/ButtonTutorial.visible = false
+	#$Tutorial/TutorialMsg.visible = false
+	
 #Update health
 func _on_tank_1_dealt_player_damage(value):
 	#print(value)
