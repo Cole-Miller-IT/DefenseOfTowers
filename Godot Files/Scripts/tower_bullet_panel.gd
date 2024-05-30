@@ -25,7 +25,7 @@ func _on_gui_input(event):
 				get_child(1).global_position = event.global_position
 				
 				#Retrieve info to check what tile the user is currently holding the tower over. i.e. is it over grass, dirt, etc.
-				var mapPath = get_tree().get_root().get_node("Level 1/TileMap")
+				var mapPath = get_tree().get_root().get_node("Level/TileMap")
 				var tile = mapPath.local_to_map(get_global_mouse_position())
 				currentTile = mapPath.get_cell_atlas_coords(0, tile, false)
 				
@@ -49,7 +49,7 @@ func _on_gui_input(event):
 				#If the tile is on a valid space. i.e. not on the path the enemies take
 				if (currentTile == validTile):
 					#Add the tempTower the user is holding and add it to the "Towers" node in the current level
-					var path = get_tree().get_root().get_node("Level 1/Towers")	
+					var path = get_tree().get_root().get_node("Level/Towers")	
 					path.add_child(tempTower)
 					tempTower.global_position = event.global_position
 					tempTower.get_node("GUIArea").hide()

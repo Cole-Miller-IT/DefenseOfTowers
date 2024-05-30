@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name Tank1
 
-var speed = 200.0
+var speed = 100.0
 var health = 100
 
 signal dealtPlayerDamage(value1)
@@ -15,7 +15,7 @@ func _process(delta):
 	
 	#Remove the entity once it reaches the end
 	if get_parent().get_progress_ratio() == 1:
-		emit_signal("dealtPlayerDamage", -10)
+		emit_signal("dealtPlayerDamage", -1)
 		queue_free()
 
 	#When the player kills the enemy
