@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg1fw7is7vt36"]
+
+[ext_resource type="Script" path="res://Scripts/tank_1.gd" id="1_8inmr"]
+[ext_resource type="Texture2D" uid="uid://bwct40aitduqe" path="res://Assets/Images/towerDefense_tile268.png" id="1_n6enl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dr8q1"]
+radius = 31.5991
+
+[node name="Tank 1" type="CharacterBody2D"]
+script = ExtResource("1_8inmr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, -0.5)
+shape = SubResource("CircleShape2D_dr8q1")
+
+[node name="TowerDefenseTile268" type="Sprite2D" parent="."]
+position = Vector2(-2.5, 0)
+scale = Vector2(0.984375, 1)
+texture = ExtResource("1_n6enl")

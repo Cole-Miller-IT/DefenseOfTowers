@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvohejj5ijwh1"]
+
+[ext_resource type="PackedScene" uid="uid://dg1fw7is7vt36" path="res://Scenes/tank_1.tscn" id="1_uu4op"]
+[ext_resource type="Script" path="res://Scripts/tank_slow.gd" id="2_65cex"]
+
+[node name="Tank 1" instance=ExtResource("1_uu4op")]
+modulate = Color(1, 0, 0, 1)
+script = ExtResource("2_65cex")

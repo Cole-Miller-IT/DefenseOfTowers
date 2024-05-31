@@ -8,6 +8,6 @@ func _ready():
 	
 func update(value):
 	score += value
-	print(score)
+	#print(score)
 	text = "Score: %s" % score
 

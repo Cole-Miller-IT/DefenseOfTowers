@@ -8,5 +8,5 @@ func _ready():
 
 func update(value):
 	gold += value
-	print(gold)
+	#print(gold)
 	text = "gold: %s" % gold
