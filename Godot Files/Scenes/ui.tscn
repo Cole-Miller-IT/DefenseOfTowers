@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://jutvao4o135e"]
+[gd_scene load_steps=14 format=3 uid="uid://jutvao4o135e"]
 
 [ext_resource type="PackedScene" uid="uid://bh6ocvuwmblu8" path="res://Scenes/tower_bullet_panel.tscn" id="1_gbtgs"]
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_nd6nn"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Scripts/Gold.gd" id="5_7byjx"]
 [ext_resource type="PackedScene" uid="uid://crm5syo40av3o" path="res://Scenes/tower_bullet_income_panel.tscn" id="5_8ctsf"]
 [ext_resource type="PackedScene" uid="uid://cjrfxht4j0eg5" path="res://Scenes/tower_bullet_poison_panel.tscn" id="6_1ukie"]
+[ext_resource type="PackedScene" uid="uid://cbgdx4fxku1vg" path="res://Scenes/tower_info_overlay.tscn" id="10_8ysj7"]
 
 [sub_resource type="Theme" id="Theme_n1m1t"]
 default_font_size = 30
@@ -81,17 +82,26 @@ layout_mode = 2
 text = "Gold: "
 script = ExtResource("5_7byjx")
 
+[node name="ButtonTowerInfo" type="Button" parent="."]
+process_mode = 3
+offset_left = 900.0
+offset_right = 976.0
+offset_bottom = 72.0
+text = "Tower 
+Info
+"
+
 [node name="ButtonResume" type="Button" parent="."]
 process_mode = 2
-offset_left = 768.0
-offset_right = 847.0
+offset_left = 741.676
+offset_right = 820.676
 offset_bottom = 72.0
 text = "Resume
 "
 
 [node name="ButtonPause" type="Button" parent="."]
-offset_left = 847.0
-offset_right = 926.0
+offset_left = 820.676
+offset_right = 899.676
 offset_bottom = 72.0
 text = "Pause"
 
@@ -134,6 +144,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 22
 text = "next"
 
+[node name="TowerInfoOverlay" parent="." instance=ExtResource("10_8ysj7")]
+process_mode = 3
+visible = false
+
+[connection signal="pressed" from="ButtonTowerInfo" to="." method="_on_button_tower_info_pressed"]
 [connection signal="pressed" from="ButtonResume" to="." method="_on_button_resume_pressed"]
 [connection signal="pressed" from="ButtonPause" to="." method="_on_button_pause_pressed"]
 [connection signal="pressed" from="Tutorial/ButtonTutorial" to="." method="_on_button_tutorial_pressed"]

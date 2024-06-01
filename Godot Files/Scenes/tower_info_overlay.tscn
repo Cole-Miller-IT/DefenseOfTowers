@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbgdx4fxku1vg"]
+
+[ext_resource type="Script" path="res://Scripts/TowerInfoOverlay.gd" id="1_d4opo"]
+[ext_resource type="PackedScene" uid="uid://bh6ocvuwmblu8" path="res://Scenes/tower_bullet_panel.tscn" id="2_tkol3"]
+[ext_resource type="PackedScene" uid="uid://7uacho5fbgr0" path="res://Scenes/tower_bullet_freeze_panel.tscn" id="3_pqm2a"]
+[ext_resource type="PackedScene" uid="uid://mub5oy3ug7o7" path="res://Scenes/tower_bullet_bomb_panel.tscn" id="4_rk4c0"]
+[ext_resource type="PackedScene" uid="uid://crm5syo40av3o" path="res://Scenes/tower_bullet_income_panel.tscn" id="5_xydho"]
+[ext_resource type="PackedScene" uid="uid://cjrfxht4j0eg5" path="res://Scenes/tower_bullet_poison_panel.tscn" id="6_32d2r"]
+
+[node name="TowerInfoOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2.0
+offset_right = 1152.0
+offset_bottom = 647.0
+script = ExtResource("1_d4opo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 0.729412)
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 704.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = -3.0
+offset_right = 1151.0
+offset_bottom = 647.0
+theme_override_constants/separation = 100
+
+[node name="Towers" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="tower_bullet_Panel4" parent="HBoxContainer/Towers" instance=ExtResource("2_tkol3")]
+layout_mode = 2
+
+[node name="tower_bullet_Panel2" parent="HBoxContainer/Towers" instance=ExtResource("3_pqm2a")]
+layout_mode = 2
+
+[node name="tower_bullet_Panel" parent="HBoxContainer/Towers" instance=ExtResource("4_rk4c0")]
+layout_mode = 2
+
+[node name="tower_bullet_Panel3" parent="HBoxContainer/Towers" instance=ExtResource("5_xydho")]
+layout_mode = 2
+
+[node name="tower_bullet_Panel5" parent="HBoxContainer/Towers" instance=ExtResource("6_32d2r")]
+layout_mode = 2
+
+[node name="Descriptions" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 43
+
+[node name="Bullet" type="Label" parent="HBoxContainer/Descriptions"]
+layout_mode = 2
+text = "Bullet Tower: 
+A basic tower that shoot a single bullet at an enemy.
+"
+
+[node name="Freeze" type="Label" parent="HBoxContainer/Descriptions"]
+layout_mode = 2
+text = "Freeze tower:
+Shoots slowing projectiles at a single enemy."
+
+[node name="Bomb" type="Label" parent="HBoxContainer/Descriptions"]
+layout_mode = 2
+text = "Bomb Tower:
+Shoots exploding bombs towards a target. Explodes 
+on impact, dealing damage in an AOE.
+"
+
+[node name="Income" type="Label" parent="HBoxContainer/Descriptions"]
+layout_mode = 2
+text = "Income Tower:
+Passively generates gold for the player every so often.
+"
+
+[node name="Poison" type="Label" parent="HBoxContainer/Descriptions"]
+layout_mode = 2
+text = "Poison Tower:
+Shoots projectiles at a target. Upon impact the projectile 
+explodes leaving behind a damaging gas for some time.
+"
+
+[node name="Close" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1086.0
+offset_right = 1148.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 41
+text = "X"
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
