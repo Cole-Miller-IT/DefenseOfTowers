@@ -20,7 +20,7 @@ func _on_path_spawner_timeout():
 		var newRoute = pathRoute.instantiate()
 		
 		var newEnemy
-		if waveNumber == 4 or waveNumber == 7:
+		if waveNumber == 3 or waveNumber == 7:
 			newEnemy = tankFast.instantiate()
 			
 		elif waveNumber == 9:
@@ -58,6 +58,6 @@ func _on_path_spawner_timeout():
 			
 			#Make the next wave more difficult
 			$PathSpawner.wait_time -= 0.25
-			if waveNumber > 3:
-				modifier += 25
+			if waveNumber > 2:
+				modifier += 35
 	

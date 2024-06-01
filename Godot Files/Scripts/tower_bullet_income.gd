@@ -3,7 +3,7 @@ extends StaticBody2D
 #Back up two levels to get to the level_# parent, then go back down through to the UI's gold node
 @onready var goldPath = $"../../UI/BoxContainer/Gold"
 
-var cost = 50
+var cost = 100
 var incomeGained = 5
 
 func _ready():

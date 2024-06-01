@@ -11,7 +11,7 @@ func _on_gui_input(event):
 	#print(tempTower.name)
 	
 	if get_parent().get_node("BoxContainer/Gold").gold >= tempTower.cost:
-		#print("Has enough gold")
+		print("Has enough gold")
 		#print(event)
 		#spawn a new tower for the user when clicking on the gui panel
 		if event is InputEventMouseButton and event.button_mask == 1:
@@ -59,4 +59,4 @@ func _on_gui_input(event):
 		else:
 			#Removes any extra towers, should only be one tower selectable at a time.
 			if get_child_count() > 1:
-				get_child(1).queue_free()
+				get_child(1).queue_free() #BUG: Causes issues with child stuff being removed

@@ -31,11 +31,25 @@ offset_left = 976.0
 offset_right = 1152.0
 offset_bottom = 648.0
 
+[node name="CostBullet" type="Label" parent="."]
+offset_left = 992.0
+offset_top = 106.0
+offset_right = 1032.0
+offset_bottom = 129.0
+text = "100"
+
 [node name="tower_bullet_Panel" parent="." instance=ExtResource("1_gbtgs")]
 offset_left = 992.0
 offset_top = 42.0
 offset_right = 1056.0
 offset_bottom = 106.0
+
+[node name="CostFreeze" type="Label" parent="."]
+offset_left = 1066.0
+offset_top = 106.0
+offset_right = 1106.0
+offset_bottom = 129.0
+text = "50"
 
 [node name="tower_bullet_Panel2" parent="." instance=ExtResource("3_rwocu")]
 offset_left = 1066.0
@@ -43,17 +57,38 @@ offset_top = 42.0
 offset_right = 1130.0
 offset_bottom = 106.0
 
+[node name="CostBomb" type="Label" parent="."]
+offset_left = 992.0
+offset_top = 256.0
+offset_right = 1032.0
+offset_bottom = 279.0
+text = "200"
+
 [node name="tower_bullet_Panel3" parent="." instance=ExtResource("4_ihaef")]
 offset_left = 992.0
 offset_top = 192.0
 offset_right = 1056.0
 offset_bottom = 256.0
 
+[node name="CostIncome" type="Label" parent="."]
+offset_left = 1066.0
+offset_top = 256.0
+offset_right = 1106.0
+offset_bottom = 279.0
+text = "100"
+
 [node name="tower_bullet_Panel4" parent="." instance=ExtResource("5_8ctsf")]
 offset_left = 1066.0
 offset_top = 192.0
 offset_right = 1130.0
 offset_bottom = 256.0
+
+[node name="CostPoison" type="Label" parent="."]
+offset_left = 992.0
+offset_top = 394.553
+offset_right = 1032.0
+offset_bottom = 417.553
+text = "200"
 
 [node name="tower_bullet_Panel5" parent="." instance=ExtResource("6_1ukie")]
 offset_left = 992.0
