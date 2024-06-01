@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://jutvao4o135e"]
+[gd_scene load_steps=15 format=3 uid="uid://jutvao4o135e"]
 
 [ext_resource type="PackedScene" uid="uid://bh6ocvuwmblu8" path="res://Scenes/tower_bullet_panel.tscn" id="1_gbtgs"]
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_nd6nn"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://crm5syo40av3o" path="res://Scenes/tower_bullet_income_panel.tscn" id="5_8ctsf"]
 [ext_resource type="PackedScene" uid="uid://cjrfxht4j0eg5" path="res://Scenes/tower_bullet_poison_panel.tscn" id="6_1ukie"]
 [ext_resource type="PackedScene" uid="uid://cbgdx4fxku1vg" path="res://Scenes/tower_info_overlay.tscn" id="10_8ysj7"]
+[ext_resource type="Script" path="res://Scripts/Wave.gd" id="10_eewod"]
 
 [sub_resource type="Theme" id="Theme_n1m1t"]
 default_font_size = 30
@@ -61,10 +62,15 @@ offset_right = 1056.0
 offset_bottom = 394.553
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
-offset_right = 768.0
+offset_right = 742.0
 offset_bottom = 42.0
 theme = SubResource("Theme_n1m1t")
-theme_override_constants/separation = 100
+theme_override_constants/separation = 46
+
+[node name="Wave" type="Label" parent="BoxContainer"]
+layout_mode = 2
+text = "Wave: ?/?"
+script = ExtResource("10_eewod")
 
 [node name="Score" type="Label" parent="BoxContainer"]
 layout_mode = 2

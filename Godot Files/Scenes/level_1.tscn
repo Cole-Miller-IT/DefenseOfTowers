@@ -41,6 +41,7 @@ loop = false
 [node name="UI" parent="." instance=ExtResource("5_x8pf8")]
 
 [connection signal="connectEnemy" from="Path" to="." method="_on_path_connect_enemy"]
+[connection signal="nextWave" from="Path" to="UI" method="_on_path_next_wave"]
 [connection signal="timeout" from="Path/PathSpawner" to="Path" method="_on_path_spawner_timeout"]
 [connection signal="dealtPlayerDamage" from="Path/PathSpawner/Path2D/PathFollow2D/Tank 1" to="UI" method="_on_tank_1_dealt_player_damage"]
 [connection signal="died" from="Path/PathSpawner/Path2D/PathFollow2D/Tank 1" to="UI" method="_on_tank_1_died"]

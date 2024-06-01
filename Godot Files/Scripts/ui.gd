@@ -46,3 +46,7 @@ func _on_button_tutorial_pressed():
 
 func _on_button_tower_info_pressed():
 	$TowerInfoOverlay.visible = true
+
+
+func _on_path_next_wave():
+	$BoxContainer/Wave.update()

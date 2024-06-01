@@ -6,6 +6,7 @@ extends Node2D
 @onready var tankFast = preload("res://Scenes/tank_fast.tscn")
 var modifier = 0
 signal connectEnemy(enemy)
+signal nextWave
 
 var waveSpawnCount = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
 var waveNumber = 0
@@ -51,6 +52,9 @@ func _on_path_spawner_timeout():
 			print("Next wave reached")
 			waveNumber += 1
 			enemiesSpawned = 0
+			
+			#Update the GUI
+			nextWave.emit()
 			
 			#Make the next wave more difficult
 			$PathSpawner.wait_time -= 0.25
