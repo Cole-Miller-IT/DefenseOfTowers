@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbwj8sh5bgdoi"]
+
+[ext_resource type="PackedScene" uid="uid://cbba8b2608xr0" path="res://Scenes/ui_game_over.tscn" id="1_bfego"]
+[ext_resource type="Script" path="res://Scripts/UIGameWon.gd" id="2_0t5c7"]
+
+[node name="UIGameWin" instance=ExtResource("1_bfego")]
+script = ExtResource("2_0t5c7")
+
+[node name="Label" type="Label" parent="." index="5"]
+offset_left = 349.0
+offset_top = 139.0
+offset_right = 828.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 27
+text = "Congratulations, you beat this level."

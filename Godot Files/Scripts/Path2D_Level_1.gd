@@ -10,7 +10,7 @@ signal nextWave
 
 var waveSpawnCount = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
 var waveNumber = 0
-var maxWaves = 9
+var maxWaves = 0
 var enemiesSpawned = 0
 
 func _on_path_spawner_timeout():
@@ -47,6 +47,9 @@ func _on_path_spawner_timeout():
 			print("Max waves reached, show win screen here")
 			
 			#And turn off the timer
+			var gameWonOverlay = load("res://Scenes/ui_game_win.tscn")
+			var instance = gameWonOverlay.instantiate()
+			add_child(instance)
 		
 		else:
 			print("Next wave reached")

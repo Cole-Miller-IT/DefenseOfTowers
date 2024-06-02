@@ -11,7 +11,7 @@ func _on_gui_input(event):
 	#print(tempTower.name)
 	
 	if get_parent().get_node("BoxContainer/Gold").gold >= tempTower.cost:
-		print("Has enough gold")
+		#print("Has enough gold")
 		#print(event)
 		#spawn a new tower for the user when clicking on the gui panel
 		if event is InputEventMouseButton and event.button_mask == 1:
