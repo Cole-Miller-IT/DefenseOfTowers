@@ -10,7 +10,7 @@ signal nextWave
 
 var waveSpawnCount = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
 var waveNumber = 0
-var maxWaves = 0
+var maxWaves = 9
 var enemiesSpawned = 0
 
 func _on_path_spawner_timeout():

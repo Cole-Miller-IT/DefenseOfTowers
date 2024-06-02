@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://xugvae4bronr"]
+
+[ext_resource type="Texture2D" uid="uid://blgoxin3yvqoi" path="res://Assets/Images/towerDefense_tile298.png" id="1_npm3r"]
+
+[sub_resource type="Curve" id="Curve_0suuw"]
+_data = [Vector2(0, 0.010989), 0.0, 0.0, 0, 0, Vector2(0.32, 0.351648), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_l5423"]
+curve = SubResource("Curve_0suuw")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_eod5i"]
+particle_flag_disable_z = true
+direction = Vector3(1, -2, 0)
+spread = 180.0
+initial_velocity_min = 77.52
+initial_velocity_max = 88.76
+gravity = Vector3(0, -1, 0)
+linear_accel_min = 16.01
+linear_accel_max = 100.0
+damping_min = 100.0
+damping_max = 100.0
+scale_curve = SubResource("CurveTexture_l5423")
+
+[node name="explosion" type="GPUParticles2D"]
+position = Vector2(-0.0848389, 1.92496)
+emitting = false
+amount = 32
+process_material = SubResource("ParticleProcessMaterial_eod5i")
+texture = ExtResource("1_npm3r")
+one_shot = true
+explosiveness = 0.75
+randomness = 0.2
+trail_enabled = true

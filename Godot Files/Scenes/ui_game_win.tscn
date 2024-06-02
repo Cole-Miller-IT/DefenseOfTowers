@@ -6,6 +6,9 @@
 [node name="UIGameWin" instance=ExtResource("1_bfego")]
 script = ExtResource("2_0t5c7")
 
+[node name="OverlayColor" parent="." index="0"]
+modulate = Color(0, 0, 0, 0.580392)
+
 [node name="Label" type="Label" parent="." index="5"]
 offset_left = 349.0
 offset_top = 139.0

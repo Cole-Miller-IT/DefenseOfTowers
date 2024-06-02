@@ -20,5 +20,12 @@ func _process(delta):
 
 	#When the player kills the enemy
 	if (health <= 0):
+		var explosion = load("res://Scenes/explosion.tscn")
+		var instance = explosion.instantiate()
+		instance.position.x = self.global_position.x - 350 #bug: maybe because of the position that it gets attached to
+		instance.position.y = self.global_position.y - 350
+		instance.emitting = true
+		get_parent().add_child(instance)
+		
 		emit_signal("died", 10)
 		queue_free()
