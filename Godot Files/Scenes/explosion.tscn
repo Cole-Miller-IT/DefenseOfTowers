@@ -23,7 +23,6 @@ damping_max = 100.0
 scale_curve = SubResource("CurveTexture_l5423")
 
 [node name="explosion" type="GPUParticles2D"]
-position = Vector2(-0.0848389, 1.92496)
 emitting = false
 amount = 32
 process_material = SubResource("ParticleProcessMaterial_eod5i")
