@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck1nnl8ty8tyl"]
+
+[ext_resource type="Material" uid="uid://cv2ka4o6ptx2m" path="res://Shaders/erosion.tres" id="1_viktj"]
+[ext_resource type="Texture2D" uid="uid://bh7mbwoiwl10i" path="res://Assets/Images/icon.svg" id="2_0nsbs"]
+
+[node name="Sprite2D" type="Sprite2D"]
+material = ExtResource("1_viktj")
+texture = ExtResource("2_0nsbs")

@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://cv2ka4o6ptx2m"]
+
+[ext_resource type="Shader" path="res://Shaders/erosion.gdshader" id="1_awi6v"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yo3ra"]
+noise_type = 0
+seed = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xwomb"]
+noise = SubResource("FastNoiseLite_yo3ra")
+
+[resource]
+shader = ExtResource("1_awi6v")
+shader_parameter/erosion_time = 0.0
+shader_parameter/erosion = SubResource("NoiseTexture2D_xwomb")
