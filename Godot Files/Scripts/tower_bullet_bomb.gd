@@ -5,4 +5,4 @@ extends BulletTower
 func _ready():
 	bullet = preload("res://Scenes/bullet_bomb.tscn")
 	damage = 200
-	cost = 200
+	cost = 100
