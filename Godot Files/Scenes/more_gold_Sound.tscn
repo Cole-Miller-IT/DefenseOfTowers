@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b21genngdxf1m"]
+
+[ext_resource type="AudioStream" uid="uid://cbdj4evli4t4v" path="res://Assets/Sound/StarCraft 2 - We require more minerals.mp3" id="1_byb2t"]
+
+[node name="MoreGold" type="AudioStreamPlayer"]
+stream = ExtResource("1_byb2t")
+volume_db = -29.165
+autoplay = true

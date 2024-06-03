@@ -60,3 +60,13 @@ func _on_gui_input(event):
 			#Removes any extra towers, should only be one tower selectable at a time.
 			if get_child_count() > 1:
 				get_child(1).queue_free() #BUG: Causes issues with child stuff being removed
+				
+	else:
+		if event is InputEventMouseButton and event.button_mask == 1:
+			#$MoreGold.play()
+			
+			var instance = load("res://Scenes/more_gold_Sound.tscn")
+			var insta = instance.instantiate()
+			get_parent().add_child(insta)
+			
+		

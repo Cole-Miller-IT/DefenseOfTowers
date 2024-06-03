@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/tower_bullet_income_panel.gd" id="2_shgip"]
 [ext_resource type="Texture2D" uid="uid://o042ul8jus1a" path="res://Assets/Images/towerDefense_tile287.png" id="3_jnhxs"]
 
-[node name="tower_bullet_Panel" instance=ExtResource("1_2vq3k")]
+[node name="incomePanel" instance=ExtResource("1_2vq3k")]
 script = ExtResource("2_shgip")
 
 [node name="TowerDefenseTile249" parent="." index="0"]

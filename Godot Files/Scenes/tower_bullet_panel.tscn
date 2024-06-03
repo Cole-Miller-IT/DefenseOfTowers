@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bh6ocvuwmblu8"]
+[gd_scene load_steps=5 format=3 uid="uid://bh6ocvuwmblu8"]
 
 [ext_resource type="Script" path="res://Scripts/tower_bullet_panel.gd" id="1_0yrus"]
 [ext_resource type="Texture2D" uid="uid://bib87x6x8n82r" path="res://Assets/Images/towerDefense_tile249.png" id="1_5pq0j"]
+[ext_resource type="AudioStream" uid="uid://cbdj4evli4t4v" path="res://Assets/Sound/StarCraft 2 - We require more minerals.mp3" id="3_2ahn5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_juduj"]
 bg_color = Color(0.866667, 0.486275, 0.239216, 1)
 
-[node name="tower_bullet_Panel" type="Panel"]
+[node name="bulletPanel" type="Panel"]
 offset_right = 64.0
 offset_bottom = 64.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_juduj")
@@ -15,5 +16,9 @@ script = ExtResource("1_0yrus")
 [node name="TowerDefenseTile249" type="Sprite2D" parent="."]
 position = Vector2(32, 32)
 texture = ExtResource("1_5pq0j")
+
+[node name="MoreGold" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2ahn5")
+volume_db = -29.165
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

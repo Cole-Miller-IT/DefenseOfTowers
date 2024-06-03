@@ -2,11 +2,14 @@ extends Bullet
 
 var hitEnemy = false
 
+func _ready():
+	damage = 25
+	
 func _physics_process(delta):
 	if hitEnemy == false:
 		#remove bullets that now no longer have a target b/c a previous bullet killed the target
 		if (target == null):
-			print("target destroyed")
+			#print("target destroyed")
 			queue_free()
 			
 		else:
@@ -22,7 +25,7 @@ func _on_area_2d_body_entered(body):
 	if body == target:
 		#turn the bullet into a stationary object that now deals damage in an AOE around it every second
 		hitEnemy = true
-		print("hit poison")
+		#print("hit poison")
 		
 		#start timer until it despawns, timer for when it should deal damage, and make the poison radius visible
 		$timerDespawn.start()

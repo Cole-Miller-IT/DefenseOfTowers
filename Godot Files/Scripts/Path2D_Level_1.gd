@@ -49,7 +49,7 @@ func _on_path_spawner_timeout():
 			#And turn off the timer
 			var gameWonOverlay = load("res://Scenes/ui_game_win.tscn")
 			var instance = gameWonOverlay.instantiate()
-			add_child(instance)
+			get_parent().add_child(instance)
 		
 		else:
 			print("Next wave reached")
@@ -62,5 +62,5 @@ func _on_path_spawner_timeout():
 			#Make the next wave more difficult
 			$PathSpawner.wait_time -= 0.25
 			if waveNumber > 2:
-				modifier += 35
+				modifier += 50
 	

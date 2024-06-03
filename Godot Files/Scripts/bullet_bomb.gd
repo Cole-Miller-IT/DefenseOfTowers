@@ -2,6 +2,7 @@ extends Bullet
 
 func _ready():
 	speed = 500
+	damage = 75
 	
 func _on_area_2d_body_entered(body):
 	if body == target:
@@ -9,6 +10,7 @@ func _on_area_2d_body_entered(body):
 		$ExplosionRadius/CollisionShape2D.set_deferred("disabled", false)
 		
 		#Destroy the bullet
+		self.visible = false
 		#queue_free()
 
 

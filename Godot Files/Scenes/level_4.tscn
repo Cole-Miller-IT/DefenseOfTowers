@@ -27,4 +27,5 @@ autostart = true
 [node name="UI" parent="." instance=ExtResource("7_angoh")]
 
 [connection signal="connectEnemy" from="Path" to="." method="_on_path_connect_enemy"]
+[connection signal="nextWave" from="Path" to="UI" method="_on_path_next_wave"]
 [connection signal="timeout" from="Path/PathSpawner" to="Path" method="_on_path_spawner_timeout"]

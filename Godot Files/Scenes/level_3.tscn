@@ -19,7 +19,7 @@ layer_0/tile_data = PackedInt32Array(3, 65536, 4, 4, 131072, 4, 65540, 131072, 4
 script = ExtResource("3_5n8rd")
 
 [node name="PathSpawner" type="Timer" parent="Path"]
-wait_time = 3.0
+wait_time = 5.0
 autostart = true
 
 [node name="Path2D" parent="Path/PathSpawner" instance=ExtResource("4_v7aa8")]
@@ -28,7 +28,7 @@ autostart = true
 script = ExtResource("5_6ddpy")
 
 [node name="PathSpawner" type="Timer" parent="Path2"]
-wait_time = 3.0
+wait_time = 5.0
 autostart = true
 
 [node name="Path2D" parent="Path2/PathSpawner" instance=ExtResource("5_chbvw")]
@@ -38,6 +38,7 @@ autostart = true
 [node name="UI" parent="." instance=ExtResource("5_pworo")]
 
 [connection signal="connectEnemy" from="Path" to="." method="_on_path_connect_enemy"]
+[connection signal="nextWave" from="Path" to="UI" method="_on_path_next_wave"]
 [connection signal="timeout" from="Path/PathSpawner" to="Path" method="_on_path_spawner_timeout"]
 [connection signal="connectEnemy" from="Path2" to="." method="_on_path_connect_enemy"]
 [connection signal="timeout" from="Path2/PathSpawner" to="Path2" method="_on_path_spawner_timeout"]

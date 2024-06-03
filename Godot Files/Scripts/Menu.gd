@@ -23,4 +23,6 @@ func _on_button_options_pressed():
 	
 
 func _on_button_quit_pressed():
+	#print("dsa")
+	#await get_tree().create_timer(1).timeout
 	get_tree().quit()
